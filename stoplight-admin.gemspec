@@ -25,12 +25,13 @@ Gem::Specification.new do |gem|
 
   gem.required_ruby_version = '>= 1.9.3'
 
+  gem.add_runtime_dependency "stoplight"
+
   {
     'haml' => '4.0',
     'redis' => '3.2',
     'sinatra' => '1.4',
-    'sinatra-contrib' => '1.4',
-    'stoplight' => '1.4'
+    'sinatra-contrib' => '1.4'
   }.each do |name, version|
     gem.add_dependency(name, "~> #{version}")
   end
